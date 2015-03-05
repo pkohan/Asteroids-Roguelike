@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public int accelForce = 1;
+	public int accelForce;
 	public Rigidbody2D rigidBody;
+	public float turnSpeedDegrees;
 
 	// Use this for initialization
 	void Start () {
@@ -12,18 +13,19 @@ public class Player : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (Input.GetKey(KeyCode.W)) {
-			rigidBody.AddForce(new Vector2(0, accelForce));
+			rigidBody.AddForce(transform.up);
 		}
 		if (Input.GetKey(KeyCode.S)) {
-			rigidBody.AddForce(new Vector2(0, -accelForce));
+			rigidBody.AddForce(-transform.up);
 		}
+		rigidBody.angularVelocity = 0f;
 		if (Input.GetKey(KeyCode.A)) {
-			rigidBody.AddForce(new Vector2(-accelForce, 0));
+			rigidBody.MoveRotation(rigidBody.rotation + turnSpeedDegrees * Time.fixedDeltaTime);
 		}
 		if (Input.GetKey(KeyCode.D)) {
-			rigidBody.AddForce(new Vector2(accelForce, 0));
+			rigidBody.MoveRotation(rigidBody.rotation - turnSpeedDegrees * Time.fixedDeltaTime);
 		}
 	}
 }
