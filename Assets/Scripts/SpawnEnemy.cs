@@ -17,7 +17,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 	private Vector3 getRandomPosition() {
 		float xRandom = Random.Range(-maxDistance, maxDistance);
-		float yRandom = Random.Range(minDistance, maxDistance);
+		float yRandom = Random.Range(-maxDistance, maxDistance);
 		return new Vector3(player.transform.position.x + xRandom, player.transform.position.y + yRandom, 0);
 	}
 }

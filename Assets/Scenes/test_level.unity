@@ -384,8 +384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 101496, guid: 454ca3ed2b6edac40b8b85f551d9a329, type: 2}
   player: {fileID: 1849148353}
-  minDistance: .0500000007
-  maxDistance: .0500000007
+  minDistance: 2
+  maxDistance: 2
 --- !u!4 &1182498123
 Transform:
   m_ObjectHideFlags: 0
