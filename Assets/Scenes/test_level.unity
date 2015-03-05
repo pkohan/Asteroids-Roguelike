@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 1849148353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.16285488, y: .316663027, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -438,5 +438,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelForce: 20
-  rigidBody: {fileID: 0}
   turnSpeedDegrees: 90
+  bullet: {fileID: 182044, guid: c4d2f232c2e5f814ebb0a72370734df9, type: 2}

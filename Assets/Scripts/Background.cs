@@ -13,6 +13,5 @@ public class Background : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rend.material.mainTextureOffset = new Vector2(player.position.x, player.position.y);
-
 	}
 }
