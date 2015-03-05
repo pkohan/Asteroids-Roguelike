@@ -16,17 +16,17 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetKey(KeyCode.W)) {
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
 			rigidBody.AddForce(transform.up);
 		}
-		if (Input.GetKey(KeyCode.S)) {
+		if (Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.DownArrow)) {
 			rigidBody.AddForce(-transform.up);
 		}
 		rigidBody.angularVelocity = 0f;
-		if (Input.GetKey(KeyCode.A)) {
+		if (Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow)) {
 			rigidBody.MoveRotation(rigidBody.rotation + turnSpeedDegrees * Time.fixedDeltaTime);
 		}
-		if (Input.GetKey(KeyCode.D)) {
+		if (Input.GetKey(KeyCode.D)|| Input.GetKey(KeyCode.RightArrow)) {
 			rigidBody.MoveRotation(rigidBody.rotation - turnSpeedDegrees * Time.fixedDeltaTime);
 		}
 
